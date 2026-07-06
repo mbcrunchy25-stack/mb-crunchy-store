@@ -168,7 +168,7 @@ function renderProductsTable() {
 }
 
 function openProductForm(product) {
-  $("#productFormWrap").style.display = "block";
+  $("#productFormWrap").classList.add("show");
   const f = $("#productForm");
   f.reset();
   f.dataset.editingId = product ? product.id : "";
@@ -206,7 +206,7 @@ async function saveProduct(e) {
     headers: { "Content-Type": "text/plain;charset=utf-8" },
     body: JSON.stringify({ action: isEdit ? "updateProduct" : "addProduct", token: TOKEN, product }),
   });
-  $("#productFormWrap").style.display = "none";
+  $("#productFormWrap").classList.remove("show");
   await loadProducts();
   renderProductsTable();
 }
