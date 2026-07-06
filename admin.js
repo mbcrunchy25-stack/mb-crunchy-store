@@ -173,16 +173,16 @@ function openProductForm(product) {
   f.reset();
   f.dataset.editingId = product ? product.id : "";
   if (product) {
-    f.id.value = product.id;
-    f.name.value = product.name;
-    f.category.value = product.category;
-    f.price.value = product.price;
-    f.unit.value = product.unit || "";
-    f.image.value = product.image || "";
-    f.description.value = product.description || "";
-    f.bestseller.checked = !!product.bestseller;
+    f.elements["id"].value = product.id;
+    f.elements["name"].value = product.name;
+    f.elements["category"].value = product.category;
+    f.elements["price"].value = product.price;
+    f.elements["unit"].value = product.unit || "";
+    f.elements["image"].value = product.image || "";
+    f.elements["description"].value = product.description || "";
+    f.elements["bestseller"].checked = !!product.bestseller;
   } else {
-    f.id.value = "NEW" + Math.floor(Math.random() * 9000 + 1000);
+    f.elements["id"].value = "NEW" + Math.floor(Math.random() * 9000 + 1000);
   }
 }
 
@@ -191,16 +191,16 @@ async function saveProduct(e) {
   const f = e.target;
   const isEdit = !!f.dataset.editingId;
   const product = {
-    id: f.id.value.trim(),
-    name: f.name.value.trim(),
-    category: f.category.value,
-    price: Number(f.price.value),
-    unit: f.unit.value.trim(),
-    image: f.image.value.trim(),
-    description: f.description.value.trim(),
-    bestseller: f.bestseller.checked,
+    id: f.elements["id"].value.trim(),
+    name: f.elements["name"].value.trim(),
+    category: f.elements["category"].value,
+    price: Number(f.elements["price"].value),
+    unit: f.elements["unit"].value.trim(),
+    image: f.elements["image"].value.trim(),
+    description: f.elements["description"].value.trim(),
+    bestseller: f.elements["bestseller"].checked,
     stock: "in",
-  };
+};
   await fetch(MB_CONFIG.APPS_SCRIPT_URL, {
     method: "POST",
     headers: { "Content-Type": "text/plain;charset=utf-8" },
