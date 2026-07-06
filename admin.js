@@ -84,16 +84,59 @@ async function loadProducts() {
 }
 
 function renderStats() {
-  const totalOrders = ORDERS.length;
-  const totalRevenue = ORDERS.reduce((s, o) => s + Number(o.total || 0), 0);
-  const pending = ORDERS.filter((o) => o.status === "New").length;
-  const avg = totalOrders ? Math.round(totalRevenue / totalOrders) : 0;
-  $("#statGrid").innerHTML = `
-    <div class="stat-card"><strong>${totalOrders}</strong><span>Total Orders</span></div>
-    <div class="stat-card"><strong>${money(totalRevenue)}</strong><span>Total Revenue</span></div>
-    <div class="stat-card"><strong>${pending}</strong><span>Pending Orders</span></div>
-    <div class="stat-card"><strong>${money(avg)}</strong><span>Avg Order Value</span></div>
-  `;
+
+const totalOrders=ORDERS.length;
+
+const totalRevenue=ORDERS.reduce((s,o)=>s+Number(o.total||0),0);
+
+const pending=ORDERS.filter(o=>o.status==="New").length;
+
+const avg=totalOrders?Math.round(totalRevenue/totalOrders):0;
+
+$("#statGrid").innerHTML=`
+
+<div class="dashboard-card">
+
+<h2>📦 ${PRODUCTS.length}</h2>
+
+<p>Total Products</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>🛒 ${totalOrders}</h2>
+
+<p>Total Orders</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>💰 ${money(totalRevenue)}</h2>
+
+<p>Revenue</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>⚠ ${pending}</h2>
+
+<p>Pending Orders</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>📈 ${money(avg)}</h2>
+
+<p>Average Order</p>
+
+</div>
+
+`;
+
 }
 
 function renderOrdersTable() {
