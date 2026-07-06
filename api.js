@@ -9,7 +9,7 @@
 
 const MB_CONFIG = {
   // Example: "https://script.google.com/macros/s/AKfycb.../exec"
-  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycby3FP7YBMwY0_1FHdw6QzPIAdoY7ZgVYFJhnUZZkHozxzSl1ZUt7sYse2tFC0llAU4/exec",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycby3FP7YBMwY0_1FHdw6QzPIAdoY7ZgVYFJhnUZZkHozxzSl1ZUt7sYse2tFC0llAU4/exec"
 ,
 
   WHATSAPP_NUMBER: "917842032879", // country code + number, no + or spaces
