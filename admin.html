@@ -35,17 +35,67 @@
 
 <!-- DASHBOARD -->
 <div id="dashboard" class="admin-wrap" style="display:none;">
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="tabOverview">Overview</button>
-    <button class="tab-btn" data-tab="tabOrders">Orders</button>
-    <button class="tab-btn" data-tab="tabProducts">Products</button>
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <h2>🌶 MB Crunchy</h2>
+
+        <button class="tab-btn active" data-tab="tabOverview">
+            🏠 Dashboard
+        </button>
+
+        <button class="tab-btn" data-tab="tabOrders">
+            🛒 Orders
+        </button>
+
+        <button class="tab-btn" data-tab="tabProducts">
+            📦 Products
+        </button>
+
+        <button class="tab-btn">
+            📊 Analytics
+        </button>
+
+        <button class="tab-btn">
+            ⚙ Settings
+        </button>
+
+    </aside>
+
+    <main class="main-content">
   </div>
 
   <div id="tabOverview" class="tab-panel active">
-    <div class="stat-grid" id="statGrid"></div>
-    <h3>Revenue — recent days</h3>
-    <canvas id="salesChart" width="800" height="240"></canvas>
+
+  <div class="stat-grid" id="statGrid"></div>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <button class="btn btn-primary" id="addProductBtn">
+      ➕ Add Product
+    </button>
+
+    <button class="btn btn-outline" id="exportCsvBtn">
+      ⬇ Export CSV
+    </button>
+
+    <button class="btn btn-outline" onclick="location.reload()">
+      🔄 Refresh
+    </button>
   </div>
+
+  <div class="dashboard-card">
+
+    <h3>Revenue — Recent Days</h3>
+
+    <canvas id="salesChart"
+            width="800"
+            height="240">
+    </canvas>
+
+</div>
+</div>
 
   <div id="tabOrders" class="tab-panel">
     <div class="toolbar">
