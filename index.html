@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MB Crunchy — Chill • Crunch • Cheer</title>
+<meta name="description" content="MB Crunchy — frozen foods, Andhra appadalu, homemade pickles, cold pressed oils, natural honey & organic bellam. Order online, home delivered.">
+<meta name="theme-color" content="#C1272D">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Open Graph -->
+<meta property="og:title" content="MB Crunchy — Chill • Crunch • Cheer">
+<meta property="og:description" content="Frozen foods, Andhra appadalu, homemade pickles, cold pressed oils, honey & bellam — delivered fresh.">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<!-- =============== NAV =============== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">🌶️</span>
+      <span>MB Crunchy<small>Chill • Crunch • Cheer</small></span>
+    </a>
+    <div class="nav-search">
+      <span>🔍</span>
+      <input id="searchInput" type="text" placeholder="Search pizza, pickles, oils...">
+    </div>
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn" id="cartIconBtn" aria-label="Open cart">
+        🛒<span class="badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<header class="hero" id="home">
+  <div class="hero-rings"><i></i><i></i><i></i></div>
+  <div class="container hero-inner">
+    <div>
+      <span class="hero-tag">🫓 Homemade. Sun-dried. Cold-pressed.</span>
+      <h1>Snacks that <span>crunch</span>,<br>traditions that <span>cheer</span>.</h1>
+      <p class="lead">From crispy Andhra appadalu to restaurant-style frozen bites, homemade pickles and cold-pressed oils — MB Crunchy brings the taste of home to your doorstep.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn btn-primary">Start Ordering</a>
+        <a href="#categories" class="btn btn-outline">Browse Categories</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>60+</strong><span>Products</span></div>
+        <div><strong>100%</strong><span>Homemade Recipes</span></div>
+        <div><strong>0</strong><span>Preservatives</span></div>
+      </div>
+    </div>
+    <div class="hero-visual"><div class="plate">🍕</div></div>
+  </div>
+  <div class="container">
+    <div class="banner">
+      <strong>🎉 Flat 10% off your first order — use code WELCOME10</strong>
+      <a href="#shop" class="btn btn-leaf btn-sm">Order Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- =============== CATEGORIES =============== -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What we make</span>
+        <h2>Shop by Category</h2>
+      </div>
+    </div>
+    <div class="cat-grid" id="categoryGrid"></div>
+  </div>
+</section>
+
+<div class="ring-divider"><span></span><span></span><span></span></div>
+
+<!-- =============== BESTSELLERS =============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Most loved</span><h2>Bestsellers</h2></div>
+    </div>
+    <div class="product-grid" id="bestsellerGrid"></div>
+  </div>
+</section>
+
+<!-- =============== SHOP / ALL PRODUCTS =============== -->
+<section class="section" id="shop" style="background:var(--cream-2);">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Full catalog</span><h2>All Products</h2></div>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="frozen">🍕 Frozen Foods</button>
+      <button class="chip" data-cat="appadalu">🫓 Appadalu</button>
+      <button class="chip" data-cat="pickles">🥒 Pickles</button>
+      <button class="chip" data-cat="oils">🛢 Cold Pressed Oils</button>
+      <button class="chip" data-cat="honey">🍯 Honey</button>
+      <button class="chip" data-cat="jaggery">🌴 Bellam</button>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- =============== REVIEWS =============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Customers say</span><h2>Loved by Families</h2></div></div>
+    <div class="review-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><p>"The avakaya pickle tastes exactly like my grandmother's recipe. Ordering again for sure."</p><div class="review-name">— Lakshmi P.</div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Frozen momos are restaurant quality. My kids ask for the chicken momos every weekend."</p><div class="review-name">— Rahul V.</div></div>
+      <div class="review-card"><div class="stars">★★★★☆</div><p>"Cold pressed groundnut oil has such a rich aroma. Delivery was quick and well packed."</p><div class="review-name">— Anitha K.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== ABOUT =============== -->
+<section class="section" id="about" style="background:var(--cream-2);">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow">Our story</span>
+      <h2>Home kitchens, honestly packed.</h2>
+      <p>MB Crunchy started with one goal — bring authentic Andhra flavours and clean, homemade food to every kitchen, without the shortcuts. Our appadalu are sun-dried the traditional way, our pickles are small-batch cooked, and our oils are cold-pressed with zero chemical extraction.</p>
+      <div class="about-badges">
+        <span>🌾 No Preservatives</span>
+        <span>🏡 Homemade Recipes</span>
+        <span>🚚 Fresh Delivery</span>
+      </div>
+    </div>
+    <div class="hero-visual" style="max-width:320px; margin:0 auto;"><div class="plate">🫓</div></div>
+  </div>
+</section>
+
+<!-- =============== FAQ =============== -->
+<section class="section" id="faq">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head"><div><span class="eyebrow">Need help?</span><h2>Frequently Asked Questions</h2></div></div>
+    <div class="faq-item">
+      <div class="faq-q">How long does delivery take? <span class="chev">⌄</span></div>
+      <div class="faq-a">We deliver within 24–48 hours across serviceable pincodes. You'll get an update on WhatsApp once your order is packed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What payment methods do you accept? <span class="chev">⌄</span></div>
+      <div class="faq-a">Google Pay, PhonePe, Paytm (via UPI QR) and Cash on Delivery are all supported.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do your products contain preservatives? <span class="chev">⌄</span></div>
+      <div class="faq-a">No. Our pickles, appadalu, and oils are made using traditional homemade methods with zero artificial preservatives.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I track my order? <span class="chev">⌄</span></div>
+      <div class="faq-a">Yes — after checkout you'll receive an order number, and you can message us on WhatsApp anytime for a live update.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== CONTACT =============== -->
+<section class="section" id="contact" style="background:var(--cream-2);">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Get in touch</span><h2>Contact Us</h2></div></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p><strong>📞 Phone / WhatsApp:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>📧 Email:</strong> hello@mbcrunchy.in</p>
+        <p><strong>📍 Address:</strong> MB Crunchy, Your Street, Your City, Telangana</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <iframe class="map-embed" id="mapEmbed" loading="lazy" src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h5 style="font-family:var(--font-display); font-size:20px; color:var(--cream);">MB Crunchy</h5>
+      <p style="opacity:.8; font-size:13px; max-width:32ch;">Chill • Crunch • Cheer — homemade frozen foods, appadalu, pickles, oils, honey & bellam.</p>
+    </div>
+    <div><h5>Shop</h5><a href="#shop">All Products</a><a href="#categories">Categories</a><a href="#">Wishlist</a></div>
+    <div><h5>Company</h5><a href="#about">About Us</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+    <div><h5>Policies</h5><a href="#">Shipping Policy</a><a href="#">Returns</a><a href="#">Privacy Policy</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> MB Crunchy. All rights reserved. Made with 🌶️ in Telangana.</div>
+</footer>
+
+<!-- =============== FLOATING BUTTONS =============== -->
+<div class="float-stack">
+  <a class="float-btn float-whatsapp" id="waFloat" href="#" aria-label="Order on WhatsApp" target="_blank">💬</a>
+  <a class="float-btn float-call" id="callFloat" href="#" aria-label="Call us">📞</a>
+</div>
+
+<!-- =============== CART DRAWER =============== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="closeCartBtn" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- =============== CHECKOUT MODAL =============== -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeCheckoutBtn" aria-label="Close">✕</button>
+    <h3>Checkout</h3>
+    <p style="color:var(--ink-soft); font-size:13px;">Fill in your delivery details to place the order.</p>
+    <form id="checkoutForm">
+      <div class="form-row"><label>Full Name</label><input name="custName" required></div>
+      <div class="form-row"><label>Phone Number</label><input name="custPhone" type="tel" pattern="[0-9]{10}" required></div>
+      <div class="form-row"><label>Delivery Address</label><textarea name="custAddress" rows="2" required></textarea></div>
+      <div class="form-row"><label>Area / Location</label><input name="custLocation" required></div>
+      <div class="form-row"><label>Order Notes (optional)</label><textarea name="custNotes" rows="2" placeholder="E.g. less spicy, ring the bell twice..."></textarea></div>
+
+      <label style="display:block; font-size:13px; font-weight:700; margin-bottom:8px;">Payment Method</label>
+      <div class="pay-options">
+        <div class="pay-opt active" data-pay="COD">💵 Cash on Delivery</div>
+        <div class="pay-opt" data-pay="GPay">📱 Google Pay</div>
+        <div class="pay-opt" data-pay="PhonePe">📱 PhonePe</div>
+        <div class="pay-opt" data-pay="Paytm">📱 Paytm</div>
+      </div>
+
+      <div id="qrBox">
+        <div id="qrCanvas" style="display:flex; justify-content:center; margin-bottom:10px;"></div>
+        <div id="txnRow" class="form-row" style="display:none;">
+          <label>Transaction ID (after payment)</label>
+          <input name="txnId">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="placeOrderBtn">Place Order</button>
+    </form>
+  </div>
+</div>
+
+<!-- =============== ORDER SUCCESS MODAL =============== -->
+<div class="modal-overlay" id="successOverlay">
+  <div class="modal" style="text-align:center;">
+    <button class="modal-close" id="closeSuccessBtn" aria-label="Close">✕</button>
+    <div style="font-size:56px;">🎉</div>
+    <h3>Order Placed!</h3>
+    <p>Your order number is <strong id="successOrderId"></strong>. We'll reach out on WhatsApp to confirm delivery.</p>
+    <button class="btn btn-leaf btn-block" id="waFinalBtn">Confirm on WhatsApp</button>
+  </div>
+</div>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/products-data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("waFloat").href = `https://wa.me/${MB_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello MB Crunchy, I have a question about my order.")}`;
+  document.getElementById("callFloat").href = `tel:${MB_CONFIG.CALL_NUMBER}`;
+  document.getElementById("mapEmbed").src = MB_CONFIG.GOOGLE_MAPS_EMBED_SRC;
+  syncFilterChips();
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch((e) => console.warn("SW registration failed", e));
+    });
+  }
+</script>
+</body>
+</html>
