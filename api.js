@@ -9,7 +9,7 @@
 
 const MB_CONFIG = {
   // Example: "https://script.google.com/macros/s/AKfycb.../exec"
-  APPS_SCRIPT_URL: https://script.google.com/macros/s/AKfycby3FP7YBMwY0_1FHdw6QzPIAdoY7ZgVYFJhnUZZkHozxzSl1ZUt7sYse2tFC0llAU4/exec
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycby3FP7YBMwY0_1FHdw6QzPIAdoY7ZgVYFJhnUZZkHozxzSl1ZUt7sYse2tFC0llAU4/exec",
 ,
 
   WHATSAPP_NUMBER: "917842032879", // country code + number, no + or spaces
@@ -17,8 +17,8 @@ const MB_CONFIG = {
   UPI_ID: "Yachamswapna@ybl",           // your real UPI ID for QR generation
   DELIVERY_CHARGE: 40,
   FREE_DELIVERY_ABOVE: 499,
-  GOOGLE_MAPS_EMBED_SRC: "https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1783336051779!5m2!1sen!2sin!6m8!1m7!1sr3CqE4oVkHaLkPL0-XFv8g!2m2!1d16.75310409675271!2d78.00285889484857!3f128.91799150091882!4f2.2902369577635966!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin",
-};
+  GOOGLE_MAPS_EMBED_SRC:
+"https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1783336051779!5m2!1sen!2sin!6m8!1m7!1sr3CqE4oVkHaLkPL0-XFv8g!2m2!1d16.75310409675271!2d78.00285889484857!3f128.91799150091882!4f2.2902369577635966!5f0.7820865974627469",
 
 function mbIsBackendConnected() {
   return (
