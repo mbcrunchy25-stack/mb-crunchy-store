@@ -225,9 +225,10 @@ function upsertCustomer(order) {
   const rows = sheet.getDataRange().getValues();
   const headers = rows[0];
   const phoneCol = headers.indexOf("phone");
+  const orderPhone = String(order.phone || "").trim();
 
   for (let i = 1; i < rows.length; i++) {
-    if (rows[i][phoneCol] === order.phone) {
+    if (String(rows[i][phoneCol] || "").trim() === orderPhone) {
       const totalOrdersCol = headers.indexOf("totalOrders");
       const totalSpentCol = headers.indexOf("totalSpent");
       const lastOrderCol = headers.indexOf("lastOrderDate");
