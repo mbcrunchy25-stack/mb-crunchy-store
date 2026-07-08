@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
-  $("#exportCsvBtn").addEventListener("click", exportOrdersCsv);
-  $("#addProductBtn").addEventListener("click", () => openProductForm());
+  $$(".js-export-csv").forEach((btn) => btn.addEventListener("click", exportOrdersCsv));
+  $$(".js-add-product").forEach((btn) => btn.addEventListener("click", () => openProductForm()));
   $("#productForm").addEventListener("submit", saveProduct);
   $("#cancelProductBtn").addEventListener("click", () => $("#productFormWrap").style.display = "none");
 });
