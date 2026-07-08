@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MB Crunchy — Admin Panel</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
 
@@ -64,7 +64,6 @@
     </aside>
 
     <main class="main-content">
-  </div>
 
   <div id="tabOverview" class="tab-panel active">
 
@@ -72,11 +71,11 @@
 
   <!-- Quick Actions -->
   <div class="quick-actions">
-    <button class="btn btn-primary" id="addProductBtn">
+    <button class="btn btn-primary js-add-product">
       ➕ Add Product
     </button>
 
-    <button class="btn btn-outline" id="exportCsvBtn">
+    <button class="btn btn-outline js-export-csv">
       ⬇ Export CSV
     </button>
 
@@ -100,7 +99,7 @@
   <div id="tabOrders" class="tab-panel">
     <div class="toolbar">
       <h3 style="margin:0;">Orders</h3>
-      <button class="btn btn-outline btn-sm" id="exportCsvBtn">⬇ Export CSV</button>
+      <button class="btn btn-outline btn-sm js-export-csv">⬇ Export CSV</button>
     </div>
     <div style="overflow-x:auto;">
       <table id="ordersTable">
@@ -113,7 +112,7 @@
   <div id="tabProducts" class="tab-panel">
     <div class="toolbar">
       <h3 style="margin:0;">Products</h3>
-      <button class="btn btn-primary btn-sm" id="addProductBtn">+ Add Product</button>
+      <button class="btn btn-primary btn-sm js-add-product">+ Add Product</button>
     </div>
     <div style="overflow-x:auto;">
       <table id="productsTable">
@@ -150,9 +149,13 @@
   </div>
 </div>
 
-<script src="products-data.js"></script>
-<script src="api.js"></script>
-<script src="admin.js"></script>
+    </main>
+  </div>
+</div>
+
+<script src="js/products-data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
 <script>
   document.getElementById("logoutBtn").style.display = "inline-block";
 </script>
