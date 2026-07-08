@@ -73,6 +73,8 @@ canvas{max-width:100%;}
 
     display:flex;
 
+    flex-direction:column;
+
     flex-Shrink:0;
 
     gap:15px;
